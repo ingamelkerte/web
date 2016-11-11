@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block body %}
+        <p>Time starts now {{ timestampStart }} </p>
+
+        <form action='/sendithere' method='POST'>
+            Word 1: <input type="text" name="Word 1" required pattern=".{3,}"title="at least 3 letters"><br>
+            Word 2: <input type="text" name="Word 2" ><br>
+            Word 3: <input type="text" name="Word 3" ><br>
+            Word 4: <input type="text" name="Word 4" ><br>
+            Word 5: <input type="text" name="Word 5" ><br>
+            Word 6: <input type="text" name="Word 6" ><br>
+            Word 7: <input type="text" name="Word 7" ><br>
+            <input type="hidden" name="timeStart" value={{timestampStart}} >
+               
+            <input type="submit" value="Submit!">
+        </form>
+        
+         
+{% endblock %}

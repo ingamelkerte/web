@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<h4>Your given word was: {{ given_word }}</h4>
+<h4>These words you got wrong</h4>
+     <table>
+                    </tr>
+    				{% for message in result%}
+						<tr>
+							<td>{{ message.0 }}</td>
+							<td>{{ message.1 }}</td>
+						</tr>
+					{% endfor %}
+    </table>
+    <form action='/startgame' method='POST'>
+    <input type="submit" value="Try Again!">
+    </form>
+{% endblock %}

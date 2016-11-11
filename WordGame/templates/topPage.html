@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1>Top Results</h1>
+<h2>Well done, {{ theUser }}!</h2>
+<h3>{{top}}</h3>
+<table>
+    <tr>
+        <tr>
+            <th>Place </th>
+            <th>Name</th>
+			<th>Time</th>
+			</tr>
+    </tr>
+    <tr>
+       
+    <tr>
+ 
+    {% set count  = 1 %}
+    {% if count < 4 %}
+        {% for k in top if count <11 %}
+        <tr>	
+                    <td>{{count}}.</td> 				   
+				    <td>{{ k[0] }} </td>
+				    <td>{{ k[1] }} </td>
+				     {% set count = count+ 1 %}
+	    </tr>	
+        	
+         {% endfor %}
+   		 {% endif %}
+		   		
+			
+				
+		
+		
+		
+					
+				
+</table>
+<form action="/startgame" method='POST'>
+   <input type="submit" value="Play Again!">
+</form>
+{% endblock %}

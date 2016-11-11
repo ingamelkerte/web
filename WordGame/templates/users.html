@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+       <h2>You won </h2>
+       <h3>Enter your name</h3>
+       <h3>You finished your game in {{ endTime}} seconds </h3>
+       <form action="/result" method='POST'>
+            <input name="user" type="text">
+            <input type="hidden" name="time" value = {{endTime}} >
+            
+            <input type="submit" value="Submit!">
+       </form>
+{% endblock %}
