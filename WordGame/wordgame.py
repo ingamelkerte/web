@@ -1,3 +1,4 @@
+#Inga Melkerte c00184799
 import random
 import pickle
 from flask import Flask, render_template, request, session
